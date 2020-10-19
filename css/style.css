@@ -1,0 +1,276 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 1.5rem;
+    position: relative;
+    z-index: -1;
+    transition: background 1s ease-in-out;
+}
+.navigation{
+    display: flex;
+    color: #fff;
+    font-size: 2rem;
+    font-family: lato;  
+}
+.navigation nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.navigation ul{
+    display: flex;
+    list-style: none;
+}
+.navigation ul li{
+    margin: 0rem 1rem;
+    padding: 0rem 1rem;
+}
+.main{
+    width: 100%;
+    min-height: 100vh;
+}
+.beach{
+    background-image: url('../img/drinks/beach.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.classy{
+    background-image: url('../img/drinks/whisky.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.beer{
+    background-image: url('../img/drinks/beer.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.lime{
+    background-image: url('../img/drinks/lime.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.bottles{
+    background-image: url('../img/drinks/bottles.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.filter{
+    min-height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.2);
+    padding: 1.5rem;
+    z-index: 0;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    position: fixed;
+    left: 0;
+    height: 100%;
+    background:#000;
+    top: 0;
+    min-width: 16%;
+    padding: .8rem;
+    transition: all 0.5s ease;
+    z-index: 10;
+    
+
+}
+.sidebar-hided{
+    transform: translateX(-100%);
+}
+.sidebar logo{
+    
+    font-size: 2rem;
+    padding-bottom: 5rem;
+    text-align: center;
+    padding-top: 1rem;
+    font-weight: 700;
+
+}
+.sidebar logo h1{
+    font-size: 3rem;
+    background: linear-gradient(45deg, #E91E63, #9729b1);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.sidebar .menu-item{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: linear-gradient(45deg, #9C27B0, #673AB7);
+    padding: 2rem;
+    border-radius: 10px;
+}
+.menu-item:hover{
+    cursor: pointer;
+}
+.main-block{
+    z-index: 2;
+    height: 100%;
+    width: 80%;
+    display: grid;
+    align-items: center;
+    position: inherit;
+    justify-content: center;
+    margin: auto;
+    padding: 10em 5em;
+}
+.content{
+    display: none;
+    justify-content: space-between;
+    height: auto;
+    background: blueviolet;
+    left: 50%;
+    z-index: 5;
+    position: absolute;
+    top: 50%;
+    width: 67%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s ease-in-out;
+}
+.insert,.modify{
+    margin-top: 2rem;
+    display: none;
+    justify-content: space-between;
+    height: auto;
+    background: blueviolet;
+    left: 50%;
+    z-index: 5;
+    position: absolute;
+    top: 50%;
+    width: 67%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s ease-in-out;
+}
+.insert .column-one form,.modify .column-one form{
+    display: flex;
+    flex-direction: column;
+}
+.insert .column-one form input, .modify .column-one form input{
+    font-size: 1.2rem;
+}
+.insert .column-one form textarea,.modify .column-one form textarea{
+    width: 90%;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+.flex{
+    display: flex !important;
+}
+.column-one, .column-two{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.column-one h2{
+    padding: 1rem;
+    font-size: 1.9rem;
+}
+.close-content,.close-add-drink,.close-update-drink{
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    right: -2rem;
+    bottom: -2rem;
+    font-size: 25px;
+    background-color: #F44336;
+    border-radius: 50%;
+    padding: 1rem;
+    transform: translate(-50%, -50%);
+    line-height: 0.9;
+    margin: auto;
+    z-index: 9;
+    box-shadow: 3px 3px 5px #8e302a;
+}
+.close-content:hover{
+    cursor: pointer;
+}
+.column-one form{
+    display: block;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+.column-one form input{
+    padding: 1.1rem;
+    width: 90%;
+    font-size: 1.2rem;
+}
+.column-one form select{
+    padding: 1.1rem;
+    width: 90%;
+    font-size: 1.2rem;
+}
+.column-two{
+    background-color: #fff;
+    min-height: 100%;
+    margin: 0;
+    padding: 3rem;
+    font-size: 1.3rem;
+}
+.column-two p{
+    margin-bottom: 1rem;
+}
+.search-drink, .add-drink,.modify-button,.delete-button,.mod-drink{
+    padding: 1rem;
+    margin-top: 1rem;
+    width: 40%;
+    background: #F44336;
+    border: none;
+    font-size: 1.4rem;
+    color: #fff;
+    font-weight: 700;
+}
+.main-title{
+    font-size: 8em;
+    color: #fff;
+    text-align: left;
+    margin-left: 10%;
+    transform: translateX(-10%);
+    opacity: 0;
+}
+.reveal{
+   animation: revealing 1s linear forwards;
+}
+@keyframes revealing{
+    from{
+        transform: translateX(-10%);
+    opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.toggle-menu{
+    display: block;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 2rem;
+    color: #fff;
+    font-size: 1.8rem;
+    background-color: #9C27B0;
+    border-radius: 50%;
+    margin: 1rem;
+    z-index: 999;
+}
+.result-drink{
+    line-height: 2rem;
+}
