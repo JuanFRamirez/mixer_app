@@ -14,10 +14,6 @@ echo '
     <div class="navigation">
         <nav>
             <logo>MIXER</logo>
-            <ul>
-                <li>Menu1</li>
-                <li>Menu2</li>
-            </ul>
         </nav>
     </div>
 </div>

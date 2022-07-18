@@ -9,8 +9,7 @@ include 'header.php';
             <br>
             Or try a tag:
             <select name="tag">
-                <option>Select</option>
-            <option value="herbal">Herbal</option>
+            <option value="herbal" default>Herbal</option>
                 <option value="sweet">Sweet</options>
                 <option value="citric">Citric</option>
                 <option value="bitter">Bitter</option>

@@ -1,13 +1,15 @@
 <?php
-
 class DBconnection{
-    public $username = 'juan';
-    public $password = '1234';
+
+    private $hostName = 'localhost';
+    private $DBName = 'drinks';
+    private $username = 'juan';
+    private $password = '1234';
 
     public function connect(){
         $username = $this->username;
         $password = $this->password;
-        $conn = new PDO('mysql:host=localhost;dbname=drinks',$username,$password);
+        $conn = new PDO("mysql:host=$this->hostName;dbname=$this->DBName",$username,$password);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         if(!$conn){
@@ -17,5 +19,3 @@ class DBconnection{
     }
 
 }
-
-?>
